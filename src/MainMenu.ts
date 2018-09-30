@@ -37,6 +37,7 @@ export class MainMenu {
                             .5, BABYLON.Animation.ANIMATIONLOOPMODE_RELATIVE,
                             new BABYLON.BounceEase(1, 10),
                             BABYLON.EasingFunction.EASINGMODE_EASEOUT);
+        this._tweenManager.disposeOnEnd = false;
         
         button = BGUI.Button.CreateImageWithCenterTextButton("but", "LT", "assets/2D/big_arrow_left@2x.png");
         button.verticalAlignment = BGUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
@@ -146,7 +147,6 @@ export class MainMenu {
             this._tweenManager.restart();
         }
         else{
-            this._tweenManager.reset();
             this._tweenManager.pause();
         }
 
