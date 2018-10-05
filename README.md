@@ -1,3 +1,6 @@
+# Stack Panel
+https://playground.babylonjs.com/ts.html#DK7M9T#7
+
 # Getting Started
 
 Assuming that `npm` is installed:

@@ -2,6 +2,7 @@ import * as BABYLON from 'babylonjs';
 import * as BGUI from 'babylonjs-gui';
 import {Tween} from './Tween';
 import {MainMenu} from './MainMenu';
+import MenuData from "./data/MenuData.json";
 
 class Game {
     private _canvas: HTMLCanvasElement;
@@ -30,7 +31,19 @@ class Game {
     }
 
     createMenu() : void {
-        this._mainMenu = new MainMenu(this._scene);
+        // var assetsManager = new BABYLON.AssetsManager(scene);
+        // var textTask = assetsManager.addTextFileTask("menu_data", "./assets/data/MenuData.json");
+        // textTask.onSuccess = (task) => {
+        //     this.data = JSON.parse(task.text);
+        //     console.log(this.data);
+        // }
+        // textTask.onError = (task) => {
+        //     console.log("failed")
+        //     console.log(task.errorObject);
+        // }
+        // assetsManager.load();
+
+        this._mainMenu = new MainMenu(this._scene, MenuData);
         this._mainMenu.show(true);
 
     }
@@ -55,6 +68,7 @@ class Game {
     createScene() : void {
         // Create a basic BJS Scene object.
         this._scene = new BABYLON.Scene(this._engine);
+        this._scene.clearColor = new BABYLON.Color3(0.6, 0.85, 0.9);
     
         // Create a FreeCamera, and set its position to (x:0, y:5, z:-10).
         this._camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5,-10), this._scene);

@@ -1,0 +1,80 @@
+{
+    "Names": ["Level1", "Level2"],
+    "ThumbnailPath":"assets/2D/level_thumbnails",
+    "SpaceAfterVariables": [0, 2, 5],
+    "Variables":
+        [
+            {
+                "ID": 0,
+                "Name": "Nb Victories to Win",
+                "Description": "The number of winning rounds that a player needs to accumulate to win the tournament. Note, if everybody else is 'terminated', you also win.",
+                "MinValue": 1,
+                "MaxValue": 5,
+                "StepValue": 1,
+                "StartON": false
+            },
+            {
+                "ID": 1,
+                "Name": "Coins Respawn Time",
+                "Description": "The time after which coins will reappear once you collected them. If you are short in bullets, you will wish that time was short.",
+                "MinValue": 2,
+                "MaxValue": 16,
+                "StepValue": 2,
+                "StartON": true
+            },
+            {
+                "ID": 2,
+                "Name": "Heart Respawn Time",
+                "Description": "The time after which hearts will reappear once you collected them. A too low number can make kills difficult.",
+                "MinValue": 2,
+                "MaxValue": 60,
+                "StepValue": 2,
+                "StartON": false
+            },
+            {
+                "ID": 3,
+                "Name": "Nb Start Bullets",
+                "Description": "How many bullets do you have to start with. Less you hve more you will rely on coins to buy new one.",
+                "MinValue": 0,
+                "MaxValue": 100,
+                "StepValue": 10,
+                "StartON": false
+            },
+            {
+                "ID": 4,
+                "Name": "Nb Start Bombs",
+                "Description": "Bomb are extremely powerful. Kill one player with it and they are eliminated from the competition ('terminated').",
+                "MinValue": 0,
+                "MaxValue": 2,
+                "StepValue": 1,
+                "StartON": false
+            },
+            {
+                "ID": 5,
+                "Name": "Renew each Round",
+                "Description": "Whether bombs and bullets are reloaded after each round. If 'no' the player will rely a lot on collecting coins to buy bullets.",
+                "MinValue": 0,
+                "MaxValue": 1,
+                "StepValue": 1,
+                "StartON": false
+            },
+            {
+                "ID": 6,
+                "Name": "Bullet Bundle Price",
+                "Description": "A low price will make it easy to get bullets from collecting coins.",
+                "MinValue": 5,
+                "MaxValue": 60,
+                "StepValue": 5,
+                "StartON": false
+            },
+            {
+                "ID": 7,
+                "Name": "Bomb Price",
+                "Description": "Bomb are extremely powerful. Put a low price can make your tournament very tricky.",
+                "MinValue": 5,
+                "MaxValue": 200,
+                "StepValue": 5,
+                "StartON": false
+            }
+        ]
+}
